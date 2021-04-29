@@ -25,12 +25,12 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies for tasks
-      run: dotnet restore ./tasks/05-generics/Generics/Generics.sln
+      run: dotnet restore ./tasks/07-generics/Generics/Generics.sln
     - name: Install dependencies for tests
-      run: dotnet restore ./tests/05-generics/Generics.sln
+      run: dotnet restore ./tests/07-generics/Generics.sln
     - name: Build debug
-      run: dotnet build ./tests/05-generics/Generics.sln --configuration Debug --no-restore
+      run: dotnet build ./tests/07-generics/Generics.sln --configuration Debug --no-restore
     - name: Build release
-      run: dotnet build ./tests/05-generics/Generics.sln --configuration Release --no-restore
+      run: dotnet build ./tests/07-generics/Generics.sln --configuration Release --no-restore
     - name: Tests
-      run: dotnet test ./tests/05-generics/Generics.sln --nologo --no-restore --no-build --logger "console;verbosity=detailed" -v:minimal
+      run: dotnet test ./tests/07-generics/Generics.sln --nologo --no-restore --no-build --logger "console;verbosity=detailed" -v:minimal
